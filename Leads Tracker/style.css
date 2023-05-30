@@ -1,0 +1,124 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    background-color: #eee;
+    counter-reset: linkCounter;
+}
+
+.container-box { 
+    padding: 2rem;
+    background-color: #eee;
+    min-width: 350px;
+}
+.container-box > input {
+    width: 100%;
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #7b4fff73;
+    outline: none;
+    margin-bottom: 1rem;
+}
+.container-box > input:focus {
+    border-color: #7b4fff;
+    caret-color: #7b4fff;
+}
+
+.container-box .buttons-box  {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+.container-box .buttons-box button {
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    flex: 1;
+    outline: none;
+    border: none;
+    background-color: #5760b5;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.168);
+}
+.container-box .buttons-box button:last-child {
+    background-color: #fd7f31;
+}
+.container-box .buttons-box button:hover {
+    border-color: rgba(134, 13, 13, 0.185);
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+    padding: 1rem 0;
+}
+ul.link-list {
+    list-style: none;
+    padding: 0;
+    max-height: 195px;
+    overflow: auto;
+}
+ul.link-list li{
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+ul.link-list li a {
+    max-width: 200px;
+    overflow: auto;
+    white-space: nowrap;
+    padding: .5rem 0rem;
+    text-decoration: none;
+    color: #333;
+    counter-increment: linkCounter;
+    gap: 1rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    transition: .25s;
+    font-size: 1rem;
+}
+ul.link-list li a::-webkit-scrollbar {
+    display: none;
+}
+ul.link-list li a::before {
+    content: counter(linkCounter);
+
+
+}
+ul.link-list li a:hover {
+    color: #7b4fff;
+}
+ul.link-list li button {
+    border-radius: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+ul.link-list li button:hover {
+    transform: rotate(-20deg);
+}
+
+
+
+ul.link-list li button img {
+    width: 30px;
+    
+}
+
+ul.link-list::-webkit-scrollbar {
+    display: none;
+}
