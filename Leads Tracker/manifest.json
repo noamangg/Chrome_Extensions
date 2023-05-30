@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Leads Tracker",
-  "version": "1.0",
+  "version": "0.1",
   "description": "A simple Chrome extension for tracking leads.",
   "action": {
     "default_popup": "popup.html",
