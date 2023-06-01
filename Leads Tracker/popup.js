@@ -28,6 +28,7 @@ document.body.appendChild(containerBox);
 checkLocal();
 renderList();
 
+
 inputFiled.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
         if (inputFiled.value) {
@@ -51,6 +52,14 @@ inputBtn.addEventListener("click", function (e) {
     insertArr(inputFiled.value);
     addLink(inputFiled.value);
     inputFiled.value = "";
+})
+
+sessionBtn.addEventListener("click", function (e) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        insertArr(tabs[0].url);
+        addLink(tabs[0].url);
+    });
+
 })
 
 
